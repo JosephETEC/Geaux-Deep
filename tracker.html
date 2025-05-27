@@ -21,11 +21,13 @@
   </header>
   <main class="hero">
     <h1>Live Tracker</h1>
-    <p>See where Geaux Deep is fishing right now</p>
-    <img src="hero.jpg" alt="Map preview" style="width:90%; max-width:800px; border-radius:10px; margin-top:2rem;" />
-    <div class="buttons" style="margin-top:2rem;">
-      <a href="https://share.garmin.com/GeauxDeep" target="_blank" class="btn">Open Fullscreen Tracker</a>
-    </div>
+    <p>Opening the tracker map...</p>
+    <script>
+      const opened = window.open("https://share.garmin.com/GeauxDeep", "_blank");
+      if (!opened) {
+        document.write('<p>Pop-up blocked. <a href="https://share.garmin.com/GeauxDeep" target="_blank">Click here to open the tracker manually.</a></p>');
+      }
+    </script>
   </main>
 </body>
 </html>
