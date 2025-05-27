@@ -3,18 +3,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Protected Tracker</title>
+  <title>Track Geaux Deep</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="hero" id="tracker-content">
+    <h1>Track Geaux Deep</h1>
+    <p>Loading...</p>
+  </main>
   <script>
     const password = prompt("Enter password to view the tracker:");
-    if (password !== "deep123") {
-      document.write("Access denied.");
-      throw new Error("Unauthorized");
+    const container = document.getElementById("tracker-content");
+
+    if (password === "deep123") {
+      container.innerHTML = `
+        <h1>Track Geaux Deep</h1>
+        <iframe src="https://share.garmin.com/GeauxDeep" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+      `;
     } else {
-      window.location.href = "real-tracker.html";
+      container.innerHTML = "<h2>Access denied.</h2>";
     }
   </script>
-</head>
-<body></body>
+</body>
 </html>
