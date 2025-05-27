@@ -1,32 +1,46 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&display=swap');
+
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   background-color: #0a1e3c;
   color: white;
 }
+
 nav ul {
   display: flex;
   list-style: none;
   background: #07152e;
   padding: 1rem;
   justify-content: space-around;
+  margin: 0;
 }
+
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
+
 .hero {
   text-align: center;
   padding: 5rem 1rem;
 }
+
 .hero h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   margin: 0;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
+
 .hero p {
+  font-size: 1.5rem;
   margin: 1rem 0;
 }
+
 .buttons .btn {
   margin: 0 1rem;
   padding: 1rem 2rem;
@@ -34,9 +48,13 @@ nav ul li a {
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
+
 footer {
   text-align: center;
   padding: 2rem;
   background: #07152e;
+  font-size: 1rem;
 }
