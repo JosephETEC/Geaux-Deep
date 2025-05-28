@@ -1,0 +1,17 @@
+
+{
+  "name": "Geaux Deep",
+  "short_name": "GeauxDeep",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0a1e3c",
+  "theme_color": "#1b87c9",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "hero.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
