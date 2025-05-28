@@ -18,16 +18,76 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="tracker.html">Tracker</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<style>
+  .nav-container {
+    background: #07152e;
+    padding: 1rem;
+  }
+
+  .nav-container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-container nav .menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-container nav .toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-container nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-container nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-container nav ul {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nav-container nav ul.show {
+      display: flex;
+    }
+
+    .nav-container nav .toggle {
+      display: block;
+    }
+  }
+</style>
+<div class="nav-container">
+  <nav>
+    <div class="toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">&#9776;</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tracker.html">Tracker</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
   <main class="hero">
     <h1>Contact Us</h1>
     <p>Want to reach the crew or learn more about our trips?</p>
